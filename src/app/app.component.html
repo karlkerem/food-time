@@ -1,4 +1,25 @@
-<h1>
-  {{title}}
-</h1>
-<router-outlet></router-outlet>
+<td-layout>
+
+    <td-navigation-drawer flex sidenavTitle="Food Time" logo="assets:main_logo">
+            <f-sidenav></f-sidenav>
+    </td-navigation-drawer>
+    
+    <td-layout-nav toolbarTitle="Food Time" logo="assets:main_logo">
+        <button id="btn-sidenav" md-icon-button td-menu-button tdLayoutToggle>
+            <md-icon>menu</md-icon>
+        </button>
+        <div id="header-container" td-toolbar-content><f-header></f-header></div>
+        <div class="main-page-container">
+            
+            <router-outlet></router-outlet>
+        </div>
+        <td-layout-footer>
+            <span class="tc-grey-500 md-caption footer">
+            by Karl Kerem. <span>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></span>
+            </span>
+        </td-layout-footer>
+    </td-layout-nav>
+</td-layout>
+
+
+

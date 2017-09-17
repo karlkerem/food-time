@@ -1,0 +1,8 @@
+
+  <md-nav-list>
+      <a md-list-item routerLink="/"><md-icon>home</md-icon>Home</a>
+      <a md-list-item *ngIf="isAuthenticated" routerLink="/lunches"><md-icon>local_pizza</md-icon>Lunches</a>
+      <a md-list-item *ngIf="isAuthenticated" routerLink="/teams"><md-icon>group</md-icon>Teams</a>
+      <a md-list-item *ngIf="isAuthenticated" (click)="logout()"><md-icon>lock_outline</md-icon>Log Out</a>
+      <a md-list-item *ngIf="!isAuthenticated" routerLink="/login"><md-icon>lock_outline</md-icon>Log In</a>
+  </md-nav-list>

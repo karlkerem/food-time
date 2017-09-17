@@ -1,0 +1,12 @@
+<div class="left-side">
+    <a md-button routerLink="/home" class="nav-first-btn" >Home</a>
+    <a md-button *ngIf="isAuthenticated" routerLink="/lunches">Lunches</a>
+    <a md-button *ngIf="isAuthenticated" routerLink="/teams">Teams</a>
+</div>
+
+<div class="right-side">
+    <div *ngIf="isAuthenticated" class="user-img" [ngStyle]="{'background-image': 'url(' + userImg + ')'}"></div>
+    <a *ngIf="!isAuthenticated" md-button class="auth-btn" routerLink="/login">Log In</a>
+    <a *ngIf="isAuthenticated" md-button class="auth-btn" (click)="logout()">Log Out</a>
+</div>
+

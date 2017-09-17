@@ -1,0 +1,35 @@
+// :host {
+//     height: 100%;
+// }
+
+@media(min-width: 768px) {
+    #btn-sidenav {
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {
+    #header-container {
+        display: none;
+    }
+}
+
+
+.main-page-container {
+        /* The image used */
+    background-image: url("/assets/background.jpeg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.footer a {
+    color: inherit;
+}
+

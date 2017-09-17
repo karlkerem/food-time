@@ -19,9 +19,14 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "f",
       "styles": [
-        "styles.sass"
+        "../node_modules/@covalent/core/common/platform.scss",
+        "../node_modules/firebaseui/dist/firebaseui.css",
+        "theme.scss",
+        "styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -51,7 +56,7 @@
     }
   },
   "defaults": {
-    "styleExt": "sass",
+    "styleExt": "scss",
     "component": {}
   }
 }
