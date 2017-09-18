@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule, MdIconModule, MdButtonModule, MdCardModule } from '@angular/material';
 import { TeamsRoutingModule } from './teams-routing.module';
 import { TeamsListComponent } from './teams-list/teams-list.component';
+import { ManageTeamComponent } from './manage-team/manage-team.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import { TeamsListComponent } from './teams-list/teams-list.component';
     CommonModule,
     TeamsRoutingModule
   ],
-  declarations: [TeamsListComponent]
+  declarations: [TeamsListComponent, ManageTeamComponent]
 })
 export class TeamsModule { }
