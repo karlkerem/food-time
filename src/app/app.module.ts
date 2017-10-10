@@ -9,7 +9,8 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MaterialModule, MdIconModule, MdButtonModule, MdCardModule } from '@angular/material';
+import { MatIconModule, MatButtonModule, MatCardModule } from '@angular/material';
+import {MATERIAL_COMPATIBILITY_MODE} from '@angular/material';
 import { CovalentLayoutModule, CovalentStepsModule } from '@covalent/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -36,10 +37,9 @@ import { SidenavComponent } from './common/sidenav/sidenav.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
-    MdIconModule,
-    MdButtonModule,
-    MdCardModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
     BrowserAnimationsModule,
     CovalentLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -48,7 +48,7 @@ import { SidenavComponent } from './common/sidenav/sidenav.component';
     TeamsModule,
     AppRoutingModule,
   ],
-  providers: [AuthGuard, AuthGuardHome, LoginService],
+  providers: [AuthGuard, AuthGuardHome, LoginService, {provide: MATERIAL_COMPATIBILITY_MODE, useValue: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,8 +1,8 @@
 
-  <md-nav-list>
-      <a md-list-item routerLink="/"><md-icon>home</md-icon>Home</a>
-      <a md-list-item *ngIf="isAuthenticated" routerLink="/lunches"><md-icon>local_pizza</md-icon>Lunches</a>
-      <a md-list-item *ngIf="isAuthenticated" routerLink="/teams"><md-icon>group</md-icon>Teams</a>
-      <a md-list-item *ngIf="isAuthenticated" (click)="logout()"><md-icon>lock_outline</md-icon>Log Out</a>
-      <a md-list-item *ngIf="!isAuthenticated" routerLink="/login"><md-icon>lock_outline</md-icon>Log In</a>
-  </md-nav-list>
+  <mat-nav-list>
+      <a mat-list-item routerLink="/"><mat-icon>home</mat-icon>Home</a>
+      <a mat-list-item *ngIf="isAuthenticated" routerLink="/lunches"><mat-icon>local_pizza</mat-icon>Lunches</a>
+      <a mat-list-item *ngIf="isAuthenticated" routerLink="/teams"><mat-icon>group</mat-icon>Teams</a>
+      <a mat-list-item *ngIf="isAuthenticated" (click)="logout()"><mat-icon>lock_outline</mat-icon>Log Out</a>
+      <a mat-list-item *ngIf="!isAuthenticated" routerLink="/login"><mat-icon>lock_outline</mat-icon>Log In</a>
+  </mat-nav-list>
